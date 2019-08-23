@@ -17,7 +17,7 @@ def no_ticks(ax, left=False, right=False, top=False, bottom=False):
 
 fig, (ax1, ax2) = plt.subplots(nrows=1, ncols=2, figsize=(10, 4))
 
-df = pd.read_csv('IMDBdata_hotlist2.csv')
+df = pd.read_csv('imdb_data.csv')
 lookat = ['Top 250 Movies', 'Bottom 250 Movies']
 df = df[df.Record.isin(lookat)]
 means = df.groupby('Record').Rating.mean()
